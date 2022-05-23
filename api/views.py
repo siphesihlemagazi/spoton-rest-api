@@ -30,7 +30,7 @@ def material_detail(request, pk):
         material = Material.objects.get(pk=pk)
 
     except Material.DoesNotExist:
-        return HttpResponse(status=status.HTTP_404_NOT_FOUND)
+        return Response(status=status.HTTP_404_NOT_FOUND)
 
     if request.method == "GET":
         serializer = MaterialSerializer(material)
