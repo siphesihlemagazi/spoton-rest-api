@@ -1,10 +1,7 @@
-from django.http import JsonResponse, HttpResponse
-from django.shortcuts import render
 from api.models import Material
 from api.serializers import MaterialSerializer
 from rest_framework import status
 from rest_framework.decorators import api_view
-from rest_framework.parsers import JSONParser
 from rest_framework.response import Response
 
 
