@@ -1,8 +1,18 @@
 from django.db import models
 
 
-grades = [('Grade 11', 'Grade 11'), ('Grade 12', 'Grade 12')]
-subjects = [('English', 'English'), ('Mathematics', 'Mathematics')]
+grades = [
+    ('Grade 8', 'Grade 8'),
+    ('Grade 9', 'Grade 9'),
+    ('Grade 10', 'Grade 10'),
+    ('Grade 11', 'Grade 11'),
+    ('Grade 12', 'Grade 12'),
+          ]
+subjects = [
+    ('English', 'English'),
+    ('Mathematics', 'Mathematics'),
+    ('Physical Science', 'Physical Science'),
+]
 
 
 class Material(models.Model):
