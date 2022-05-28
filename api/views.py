@@ -1,14 +1,12 @@
-from django.http import JsonResponse, HttpResponse
-from django.shortcuts import render
 from api.models import Material
 from api.serializers import MaterialSerializer
+from django.http import HttpResponse
 from rest_framework import status
-from rest_framework.decorators import api_view
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
 
-class MaterialAPIView(APIView):
+class MaterialList(APIView):
 
     def get(self, request):
         materials = Material.objects.all()
@@ -25,7 +23,7 @@ class MaterialAPIView(APIView):
         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
 
 
-class MaterialDetails(APIView):
+class MaterialDetail(APIView):
 
     def get_object(self, id):
         try:
